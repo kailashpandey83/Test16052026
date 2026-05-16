@@ -1,0 +1,397 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Indian Export Hub | Global Export & Import</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f7f7f7;
+        color:#222;
+        line-height:1.6;
+    }
+
+    /* HEADER */
+
+    header{
+        background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1400&q=80');
+        background-size:cover;
+        background-position:center;
+        height:100vh;
+        color:white;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:20px;
+    }
+
+    header h1{
+        font-size:60px;
+        margin-bottom:20px;
+        text-transform:uppercase;
+        letter-spacing:2px;
+    }
+
+    header p{
+        font-size:22px;
+        max-width:800px;
+    }
+
+    .btn{
+        margin-top:30px;
+        padding:15px 35px;
+        background:#ff6b00;
+        color:white;
+        text-decoration:none;
+        border-radius:30px;
+        font-size:18px;
+        transition:0.3s;
+    }
+
+    .btn:hover{
+        background:#e65c00;
+        transform:scale(1.05);
+    }
+
+    /* NAVBAR */
+
+    nav{
+        position:sticky;
+        top:0;
+        background:#111;
+        padding:15px;
+        z-index:1000;
+    }
+
+    nav ul{
+        display:flex;
+        justify-content:center;
+        list-style:none;
+        gap:30px;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        color:#ff6b00;
+    }
+
+    /* SECTION */
+
+    section{
+        padding:80px 10%;
+    }
+
+    .section-title{
+        text-align:center;
+        margin-bottom:50px;
+    }
+
+    .section-title h2{
+        font-size:40px;
+        color:#222;
+    }
+
+    .section-title p{
+        color:#666;
+        margin-top:10px;
+    }
+
+    /* PRODUCTS */
+
+    .products{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+        gap:30px;
+    }
+
+    .card{
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+    }
+
+    .card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card-content h3{
+        margin-bottom:10px;
+        color:#ff6b00;
+    }
+
+    .card-content p{
+        color:#555;
+    }
+
+    /* ABOUT */
+
+    .about{
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        gap:40px;
+    }
+
+    .about img{
+        width:100%;
+        max-width:500px;
+        border-radius:15px;
+    }
+
+    .about-text{
+        flex:1;
+    }
+
+    .about-text h2{
+        font-size:40px;
+        margin-bottom:20px;
+    }
+
+    /* CONTACT */
+
+    .contact-form{
+        background:white;
+        padding:40px;
+        border-radius:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        max-width:700px;
+        margin:auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        width:100%;
+        padding:15px;
+        margin-bottom:20px;
+        border:1px solid #ccc;
+        border-radius:8px;
+        font-size:16px;
+    }
+
+    .contact-form button{
+        background:#ff6b00;
+        color:white;
+        border:none;
+        padding:15px 30px;
+        font-size:18px;
+        border-radius:30px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    .contact-form button:hover{
+        background:#e65c00;
+    }
+
+    /* FOOTER */
+
+    footer{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+        header h1{
+            font-size:40px;
+        }
+
+        header p{
+            font-size:18px;
+        }
+
+        nav ul{
+            flex-direction:column;
+            align-items:center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+
+<header>
+    <h1>Indian Export Hub</h1>
+    <p>
+        Premium Quality Indian Masala, Dehydrated Vegetables,
+        Dry Fruits & Agricultural Products Exported Worldwide.
+    </p>
+
+    <a href="#products" class="btn">Explore Products</a>
+</header>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+    <div class="section-title">
+        <h2>Our Products</h2>
+        <p>Exporting Best Quality Products From India To The World</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Indian Masala</h3>
+                <p>
+                    Premium spices including turmeric, red chilli,
+                    cumin, coriander, garam masala and more.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Dehydrated Vegetables</h3>
+                <p>
+                    High quality dehydrated onion, garlic,
+                    tomato, ginger and mixed vegetables.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Dry Fruits</h3>
+                <p>
+                    Export quality almonds, cashews,
+                    pistachios, raisins and walnuts.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Agricultural Products</h3>
+                <p>
+                    Rice, pulses, grains, herbs and other
+                    authentic Indian agricultural products.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="about">
+
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+
+        <div class="about-text">
+            <h2>About Our Business</h2>
+
+            <p>
+                We are a trusted Indian Export Import company supplying
+                premium quality food and agricultural products across the globe.
+                Our mission is to deliver authentic Indian products with
+                international quality standards and timely delivery.
+            </p>
+
+            <br>
+
+            <p>
+                We specialize in spices, dehydrated vegetables,
+                dry fruits and customized export solutions for global buyers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Send Your Inquiry For International Trade</p>
+    </div>
+
+    <div class="contact-form">
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <input type="text" placeholder="Country">
+
+            <textarea rows="6" placeholder="Write Your Requirement"></textarea>
+
+            <button type="submit">Send Inquiry</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>
+        © 2026 Indian Export Hub | All Rights Reserved
+    </p>
+</footer>
+
+</body>
+</html>
